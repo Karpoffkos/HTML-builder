@@ -1,3 +1,11 @@
-const path = require ('path');
-const text = path.join (__dirname.'text.txt');
-console.log ('123321123321123321');
+
+const fs = require ('fs');
+//const path = require ('path');
+
+fs.readFile('./text.txt', (err, data) => {
+    if  (err) {
+        console.log(err);
+    }
+    console.log(data.toString());
+    }
+);
